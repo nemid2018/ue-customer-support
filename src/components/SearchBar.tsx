@@ -104,6 +104,7 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
         type="text"
         placeholder={t("search.placeholder", language)}
         value={value}
+        maxLength={200}
         onChange={(e) => onChange(e.target.value)}
         onFocus={() => setFocused(true)}
         onKeyDown={(e) => {

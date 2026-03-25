@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <script>
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
-      }
-    </script>
+    <!-- Security headers (HTTP headers unavailable on GitHub Pages; meta equivalents used) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none';" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <script src="spa-redirect.js"></script>
     <title>Merchant Help Hub | Merchants & Restaurants | Uber Eats</title>
     <meta name="description" content="Troubleshooting and support resources for Uber Eats restaurant merchants." />
     <meta name="author" content="Uber Eats" />
