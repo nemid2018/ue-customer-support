@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Uber Eats Merchant Help Hub
 
-TODO: Document your project here
+Troubleshooting and support resources for Uber Eats restaurant merchants.

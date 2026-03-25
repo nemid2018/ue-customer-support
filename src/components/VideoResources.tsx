@@ -22,7 +22,7 @@ const VideoResources = () => {
         href={PLAYLIST_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 bg-foreground text-card px-5 py-2.5 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
+        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
       >
         {t("video.button", language)}
         <ExternalLink className="h-4 w-4" />

@@ -74,6 +74,8 @@ export const categories: Category[] = [
         ],
         proTip: "Orders may auto-pause if you're logged in outside your typical operating hours. Check your hours in Uber Eats Manager.",
         sourceUrl: "https://help.uber.com/en/merchants-and-restaurants/article/not-accepting-orders-on-android-device?nodeId=877ee261-f2d4-4b55-9d6c-bf1d88f7a024",
+        videoUrl: playlistVideo("YXTJeqKqLjQ"),
+        videoTitle: "Uber Eats Orders Overview",
       },
       {
         id: "unable-to-load-android",
@@ -90,6 +92,8 @@ export const categories: Category[] = [
           "Wait ~1 minute, then hold down the button again to restart the device.",
         ],
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/unable-to-load-error-on-android-device?nodeId=ca6a166c-df20-4596-8320-e31418a7c62a",
+        videoUrl: playlistVideo("YXTJeqKqLjQ"),
+        videoTitle: "Uber Eats Orders Overview",
       },
       {
         id: "store-not-visible",
@@ -106,6 +110,8 @@ export const categories: Category[] = [
           "If still experiencing issues, contact support at merchants@uber.com.",
         ],
         sourceUrl: "https://help.uber.com/en/merchants-and-restaurants/article/my-store-isnt-visible-in-the-uber-eats-app?nodeId=c57c54cc-12f1-49ac-88e5-ef8e04f624cb",
+        videoUrl: playlistVideo("YXTJeqKqLjQ"),
+        videoTitle: "Uber Eats Orders Overview",
       },
       {
         id: "wifi-ipad",
@@ -147,6 +153,8 @@ export const categories: Category[] = [
         ],
         proTip: "Running on your own device is a great backup if your Uber-provided tablet has issues.",
         sourceUrl: "https://help.uber.com/restaurants/article/can-i-access-restaurant-dashboard-without-an-uber-eats-tablet?nodeId=c961d393-fd73-49e2-804a-b578dd77ded8",
+        videoUrl: playlistVideo("YXTJeqKqLjQ"),
+        videoTitle: "Uber Eats Orders Overview",
       },
       {
         id: "other-device-issue",
@@ -265,6 +273,8 @@ export const categories: Category[] = [
           "Review and publish your menu when ready.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/creating-your-uber-eats-menu?nodeId=53eccecf-f372-468d-9233-22d07b7019f4",
+        videoUrl: playlistVideo("zlW-bfzkYr8"),
+        videoTitle: "Managing Your Uber Eats Menu",
       },
       {
         id: "add-category",
@@ -342,6 +352,8 @@ export const categories: Category[] = [
         ],
         proTip: "Items with photos get up to 30% more orders. It's worth the effort to photograph every item!",
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/merchant-submitted-menu-catalog-photo-guidelines?nodeId=6985355b-0426-4523-94f2-89bb9b0566e9",
+        videoUrl: playlistVideo("KOm5R3EirzQ"),
+        videoTitle: "Managing Items, Pricing, and Descriptions",
       },
     ],
   },
@@ -454,6 +466,8 @@ export const categories: Category[] = [
           "If you need to cancel due to an item being unavailable, use the 'Items not available' feature first to offer substitutions.",
         ],
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/how-do-i-cancel-an-order?nodeId=93c0eab4-4c34-4d39-a79e-06e89ec0504c",
+        videoUrl: playlistVideo("wAvQSckRLP0"),
+        videoTitle: "How To Make Order Adjustments",
       },
       {
         id: "customer-cancelled",
@@ -480,6 +494,8 @@ export const categories: Category[] = [
         ],
         proTip: "Create a verification checklist for your staff. Read each item on the ticket aloud before sealing the bag.",
         sourceUrl: "https://help.uber.com/restaurants/article/what-if-we-forgot-an-item-for-an-order?nodeId=af9b8744-fdf4-49ad-8d8e-ddef44fdecd4",
+        videoUrl: playlistVideo("RROhfGg4gU4"),
+        videoTitle: "How To Minimize Order Errors",
       },
       {
         id: "pause-orders",
@@ -510,6 +526,8 @@ export const categories: Category[] = [
           "Ensure your prep times are accurate — late orders hurt visibility.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/my-restaurant-isnt-getting-enough-orders?nodeId=14e55af9-7c6e-423b-98f4-4da0b7b63555",
+        videoUrl: playlistVideo("IaJi2cUKOPk"),
+        videoTitle: "How to create an Offer",
       },
       {
         id: "pickup-option",
@@ -560,6 +578,8 @@ export const categories: Category[] = [
         ],
         proTip: "Write down your password or store it somewhere secure. It's essential for partnering with Uber.",
         sourceUrl: "https://help.uber.com/restaurants/article/what-if-i-forget-my-username-andor-password?nodeId=c908178e-4d8c-4f4e-8998-8c07ff374447",
+        videoUrl: playlistVideo("LY8K2_EgAz8"),
+        videoTitle: "Getting Started with Uber Eats Manager",
       },
       {
         id: "reset-dashboard-password",
@@ -573,6 +593,8 @@ export const categories: Category[] = [
           "To change your password (when logged in): go to Settings > Account > Change Password.",
         ],
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/forgot-or-change-your-restaurant-dashboard-password?nodeId=31186846-0768-4c00-af0c-5c03c107ff0b",
+        videoUrl: playlistVideo("LY8K2_EgAz8"),
+        videoTitle: "Getting Started with Uber Eats Manager",
       },
       {
         id: "setup-bank",
@@ -586,6 +608,8 @@ export const categories: Category[] = [
           "Payouts will be sent to this account on your regular payout schedule.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/setting-up-your-bank-account?nodeId=713dd9bf-3ca5-4513-a292-95982c60a7da",
+        videoUrl: playlistVideo("ZTz9tOEdp8Y"),
+        videoTitle: "Understanding Payouts",
       },
       {
         id: "understanding-payouts",
@@ -614,6 +638,8 @@ export const categories: Category[] = [
           "Note: daily payouts may have different processing times than weekly payouts.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/how-can-i-opt-into-daily-payouts-instead-of-weekly?nodeId=8f9c33ab-0229-4896-9761-1bfac6a22782",
+        videoUrl: playlistVideo("ZTz9tOEdp8Y"),
+        videoTitle: "Understanding Payouts",
       },
       {
         id: "download-invoices",
@@ -644,6 +670,8 @@ export const categories: Category[] = [
         ],
         proTip: "Talk to your account rep about which plan makes the most sense for your order volume and goals.",
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/how-do-customer-delivery-fees-work?nodeId=517267dc-e7e4-440b-8510-c7ddf5ad0876",
+        videoUrl: playlistVideo("ZTz9tOEdp8Y"),
+        videoTitle: "Understanding Payouts",
       },
       {
         id: "error-charges",
@@ -724,6 +752,8 @@ export const categories: Category[] = [
           "Remember to update your hours when you're ready to reopen!",
         ],
         sourceUrl: "https://help.uber.com/merchants-and-restaurants/article/how-to-change-your-menu-hours?nodeId=e270e0d0-1e8f-4481-b0c7-4331e8acdfaa",
+        videoUrl: playlistVideo("cJjnl3LVj6w"),
+        videoTitle: "How to update store hours",
       },
       {
         id: "store-showing-closed",
@@ -736,6 +766,8 @@ export const categories: Category[] = [
           "Make sure your tablet is connected to the internet.",
           "If everything looks correct, contact support — there may be a temporary hold on your account.",
         ],
+        videoUrl: playlistVideo("68uPazCFM1c"),
+        videoTitle: "How to Change Operating Hours",
       },
     ],
   },
@@ -757,6 +789,8 @@ export const categories: Category[] = [
           "Add menu photos and detailed descriptions to set correct expectations.",
         ],
         proTip: "Stores with ratings above 4.7 get significantly more visibility in the Uber Eats app.",
+        videoUrl: playlistVideo("Ve-5OH1XcYk"),
+        videoTitle: "How to engage with customers",
       },
       {
         id: "respond-reviews",
@@ -769,6 +803,8 @@ export const categories: Category[] = [
           "Be professional, thank them for feedback, and address specific concerns.",
           "For negative reviews, offer a solution or explain what you'll do differently.",
         ],
+        videoUrl: playlistVideo("fF7kmQ7ZaSY"),
+        videoTitle: "How to automatically reply to reviews",
       },
       {
         id: "auto-reply-reviews",
@@ -783,6 +819,7 @@ export const categories: Category[] = [
           "You can still manually reply to any review that needs a personal touch.",
         ],
         videoUrl: playlistVideo("fF7kmQ7ZaSY"),
+
         videoTitle: "How to automatically reply to reviews",
       },
       {
@@ -835,6 +872,8 @@ export const categories: Category[] = [
           "Review campaign analytics to see impressions, orders, and ROI.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/uber-eats-manager-marketing-tool-faqs?nodeId=a9838c22-2065-43e1-85c2-cbca0d3e9802",
+        videoUrl: playlistVideo("IaJi2cUKOPk"),
+        videoTitle: "How to create an Offer",
       },
       {
         id: "ads-sponsored",
@@ -847,6 +886,8 @@ export const categories: Category[] = [
           "Monitor your ad performance — look at impressions, clicks, and orders generated.",
           "Adjust your budget based on results.",
         ],
+        videoUrl: playlistVideo("r-X5CYQtrgg"),
+        videoTitle: "Introducing Uber Ads Manager",
       },
       {
         id: "ads-expert-tips",
@@ -965,6 +1006,8 @@ export const categories: Category[] = [
           "Once approved, you'll receive your login credentials and can start receiving orders.",
         ],
         sourceUrl: "https://help.uber.com/restaurants/article/how-do-i-become-an-uber-eats-restaurant-partner?nodeId=28289000-fd7e-4e2f-8d62-4c729016bcf7",
+        videoUrl: playlistVideo("LY8K2_EgAz8"),
+        videoTitle: "Getting Started with Uber Eats Manager",
       },
     ],
   },

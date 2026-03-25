@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Globe } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import CategoryCard from "@/components/CategoryCard";
@@ -51,11 +51,13 @@ const Index = () => {
     setSelectedCategoryId(categoryId);
     setHighlightedItemId(itemId);
     setSearch("");
-    setTimeout(() => {
-      const el = document.getElementById(`item-${itemId}`);
-      el?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 100);
   };
+
+  useEffect(() => {
+    if (!highlightedItemId) return;
+    const el = document.getElementById(`item-${highlightedItemId}`);
+    el?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [highlightedItemId, selectedCategoryId]);
 
   const filteredCategories = useMemo(() => {
     if (!search.trim()) return translatedCategories;
@@ -87,7 +89,7 @@ const Index = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <span className="text-xl font-bold text-foreground">{t("header.title", language)}</span>
-            <span className="text-muted-foreground text-sm">{t("header.subtitle", language)}</span>
+            <span className="text-xl font-normal text-foreground">{t("header.subtitle", language)}</span>
           </button>
           <div className="relative">
             <button
@@ -163,11 +165,11 @@ const Index = () => {
       </main>
 
       <footer className="border-t border-border bg-card mt-12">
-        <div className="max-w-4xl mx-auto px-4 py-6 text-center text-xs text-muted-foreground">
-          {t("footer.text", language)}{" "}
-          <a href="https://help.uber.com/restaurants" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-            help.uber.com
-          </a>.
+        <div className="max-w-4xl mx-auto px-4 py-6 text-center text-xs text-muted-foreground flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+          <span>© 2026 Uber Technologies Inc.</span>
+          <a href="https://www.uber.com/legal/privacy/users/en/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
+          <a href="https://www.uber.com/legal/terms/us/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Terms</a>
+          <a href="https://help.uber.com/restaurants" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Help</a>
         </div>
       </footer>
     </div>

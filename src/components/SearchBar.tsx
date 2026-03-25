@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Search } from "lucide-react";
 import { searchArticles, type SearchResult } from "@/lib/fuzzySearch";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -20,7 +20,7 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
   const { language } = useLanguage();
 
   // Build translated categories for search display
-  const translatedCategories = (() => {
+  const translatedCategories = useMemo(() => {
     const translations = getTranslatedContent(language);
     if (!translations) return categories;
     return categories.map((cat) => {
@@ -37,7 +37,7 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
         }),
       };
     });
-  })();
+  }, [language]);
 
   // Search always uses English data for matching, but display translated titles
   const results = searchArticles(value, 6);

@@ -18,8 +18,26 @@ const LanguageContext = createContext<LanguageContextType>({
   setLanguage: () => {},
 });
 
+const STORAGE_KEY = "ue-support-language";
+
+const getInitialLanguage = (): Language => {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "en" || stored === "es" || stored === "zh") return stored;
+  } catch {}
+  return "en";
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {}
+  };
+
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
