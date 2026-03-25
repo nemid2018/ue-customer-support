@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: '/ue-customer-support/',
+  base: process.env.NODE_ENV === 'production' ? '/ue-customer-support/' : '/',
   server: {
     host: "::",
     port: 8080,
