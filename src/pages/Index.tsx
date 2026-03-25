@@ -9,6 +9,7 @@ import { categories } from "@/data/troubleshootingData";
 import { useLanguage, languageLabels, type Language } from "@/contexts/LanguageContext";
 import { t } from "@/data/uiTranslations";
 import { getTranslatedContent } from "@/data/contentTranslations";
+import { searchArticles } from "@/lib/fuzzySearch";
 import type { Category } from "@/data/troubleshootingData";
 
 const useTranslatedCategories = (language: Language): Category[] => {
@@ -71,18 +72,10 @@ const Index = () => {
   }, [highlightedItemId, selectedCategoryId]);
 
   const filteredCategories = useMemo(() => {
-    if (!search.trim()) return translatedCategories;
-    const q = search.toLowerCase();
+    if (search.trim().length < 2) return translatedCategories;
+    const matchedIds = new Set(searchArticles(search, 200).map((r) => r.item.id));
     return translatedCategories
-      .map((cat) => ({
-        ...cat,
-        items: cat.items.filter(
-          (item) =>
-            item.title.toLowerCase().includes(q) ||
-            item.description.toLowerCase().includes(q) ||
-            item.steps.some((s) => s.toLowerCase().includes(q))
-        ),
-      }))
+      .map((cat) => ({ ...cat, items: cat.items.filter((item) => matchedIds.has(item.id)) }))
       .filter((cat) => cat.items.length > 0);
   }, [search, translatedCategories]);
 

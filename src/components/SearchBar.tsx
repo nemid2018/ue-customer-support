@@ -53,7 +53,7 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
     };
   }), [results, translatedCategories]);
 
-  const showDropdown = focused && value.trim().length > 0 && displayResults.length > 0;
+  const showDropdown = focused && value.trim().length >= 2;
 
   useEffect(() => {
     setActiveIndex(-1);
@@ -127,23 +127,29 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
 
       {showDropdown && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-xl shadow-lg overflow-hidden z-50">
-          {displayResults.map((result, i) => (
-            <button
-              key={result.item.id}
-              onMouseDown={() => handleSelect(results[i])}
-              onMouseEnter={() => setActiveIndex(i)}
-              className={`w-full text-left px-4 py-3 flex flex-col gap-0.5 transition-colors ${
-                i === activeIndex ? "bg-primary/10" : "hover:bg-muted/50"
-              } ${i > 0 ? "border-t border-border/50" : ""}`}
-            >
-              <span className="text-sm font-medium text-foreground leading-snug">
-                {result.item.title}
-              </span>
-              <span className="text-xs text-muted-foreground">
-                {result.categoryTitle}
-              </span>
-            </button>
-          ))}
+          {displayResults.length === 0 ? (
+            <div className="px-4 py-3 text-sm text-muted-foreground">
+              No results found — try a different search
+            </div>
+          ) : (
+            displayResults.map((result, i) => (
+              <button
+                key={result.item.id}
+                onMouseDown={() => handleSelect(results[i])}
+                onMouseEnter={() => setActiveIndex(i)}
+                className={`w-full text-left px-4 py-3 flex flex-col gap-0.5 transition-colors ${
+                  i === activeIndex ? "bg-primary/10" : "hover:bg-muted/50"
+                } ${i > 0 ? "border-t border-border/50" : ""}`}
+              >
+                <span className="text-sm font-medium text-foreground leading-snug">
+                  {result.item.title}
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  {result.categoryTitle}
+                </span>
+              </button>
+            ))
+          )}
         </div>
       )}
     </div>
