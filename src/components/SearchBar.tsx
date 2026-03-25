@@ -40,10 +40,10 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
   }, [language]);
 
   // Search always uses English data for matching, but display translated titles
-  const results = searchArticles(value, 6);
+  const results = useMemo(() => searchArticles(value, 6), [value]);
 
   // Map results to translated versions for display
-  const displayResults = results.map((r) => {
+  const displayResults = useMemo(() => results.map((r) => {
     const cat = translatedCategories.find((c) => c.id === r.categoryId);
     const item = cat?.items.find((i) => i.id === r.item.id);
     return {
@@ -51,7 +51,7 @@ const SearchBar = ({ value, onChange, onSelectResult }: SearchBarProps) => {
       categoryTitle: cat?.title ?? r.categoryTitle,
       item: item ?? r.item,
     };
-  });
+  }), [results, translatedCategories]);
 
   const showDropdown = focused && value.trim().length > 0 && displayResults.length > 0;
 

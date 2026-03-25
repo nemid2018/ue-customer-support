@@ -1,3 +1,4 @@
+import { type ElementType } from "react";
 import {
   Tablet, UtensilsCrossed, ShoppingBag, DollarSign,
   Clock, Star, Megaphone, ChevronRight, Printer,
@@ -7,7 +8,7 @@ import type { Category } from "@/data/troubleshootingData";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { t } from "@/data/uiTranslations";
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, ElementType> = {
   Tablet, UtensilsCrossed, ShoppingBag, DollarSign,
   Clock, Star, Megaphone, Printer, Monitor, Rocket, Headphones,
 };
